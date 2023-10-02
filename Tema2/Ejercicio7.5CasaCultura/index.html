@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="code.js"></script>
+</head>
+<body>
+    <h1>Curso de fotografía</h1>
+    
+    <p>El 18 de Mayo se ha concertado un curso de fotograría para aprender a manejar técnicas de dirección de modelos, iluminación, revelado y postproducción. El curso será impartido en las instalaciones del centro norte.
+    </p>
+    <p>El curso se impartirá a personas de entre 18 y 67 años.<br>
+        Los turnos disponibles que se hará serán de mañana y tarde.
+    </p><br>
+    <p>En el curso se dispondrá de todo el material por parte de los instructores
+        del centro, con lo cual no es necesario que se venga con material al aula.
+    </p><br>
+    <form action="tu_archivo.php" method="post">
+
+        <label for="nombre">Nombre y apellidos:</label>
+        <input type="text" id="txtNombre" name="nombre" /><br />
+        <label for="edad">Edad: <input type="number" id="txtEdad" ></label><br>
+        
+        <label for="turnos">Turnos: <input list="turnos" name="turnos" id="txtTurnos" ></label><br>
+        
+        <label for="password1">Contraseña: <input type="password" id="password1"></label><br>
+        <label for="password2">Verificación contraseña: <input type="password" id="password2"></label><br>
+        <input type="submit" value="Validar" id="btnValidar"/>
+    </form>
+
+    <datalist id="turnos">
+        <option value="Mañana">Mañana</option>
+        <option value="Tarde">Tarde</option>
+    </datalist>
+    <div id="errores"></div>
+</body>
+</html>

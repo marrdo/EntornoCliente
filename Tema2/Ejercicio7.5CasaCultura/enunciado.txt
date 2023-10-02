@@ -1,0 +1,46 @@
+ Crea una página web que sirva de formulario de inscripción a un 
+ curso de fotografía de la Casa de la cultura de Utrera. Para 
+ ello básate en el arhivo index.html que encontrarás en la carpeta 
+ del ejercicio. Todo lo que tienes que hacer y añadir en la web lo 
+ harás dentro de la división cuyo id es formulario.
+
+Añade un encabezado de nivel 1 con el texto "Curso de fotografía".
+Añade a continuación tres párrafos a la web. En el primero aparecerá 
+el siguiente texto: "El 18 de Mayo se ha concertado un curso de fotograría para aprender a manejar técnicas de dirección de modelos, iluminación, revelado y postproducción. El curso será impartido en las instalaciones del centro norte."
+En el segundo párrafo explica con tus palabras que se pueden 
+matricular en el curso aquellos mayores de edad hasta 67 años y que 
+hay dos turnos que serán Mañana y Tarde.
+En el último párrafo añade la información que te parezca oportuna.
+
+Después de los párrafos aparecerán los textboxes. La página web 
+contendrá cinco textboxes, en el primero la persona interesada en 
+el curso tendrá que teclear su nombre completo.
+En el segundo deberá escribirse la edad.
+En el tercero el turno elegido (debe indicarse en la web que los 
+turnos posibles son "Mañana" o "Tarde").
+Los dos últimos serán para incluir una contraseña que tendrá que 
+escribirse dos veces (una vez en cada textbox).
+Habrá un botón con el título "Validar" que servirá para validar 
+los datos del cuestionario.
+
+Incluye ahora una división con el id errores donde aparecerán los 
+errores del formulario.
+
+La función de validación de los datos se ejecutará cuando se pulse 
+el botón validar. Se tendrá que comprobar:
+
+    Si el textbox del nombre, de la edad o del turno están vacíos, 
+    aparecerá un mensaje en la división errores indicando que deben 
+    rellenarse todos los campos.
+    También se comprobará que si ocupa más de 20 caracteres 
+    se mostrará un mensaje de error en la división errores.
+    Si la edad no está entre 18 y 67, se mostrará un mensaje 
+    de error en la división errores.
+    Si el turno no es "Mañana" o "Tarde" se mostrará un mensaje 
+    de error en la división errores.
+    La contraseña escrita en los textboxes de contraseña tendrán 
+    que ser iguales, además tendrá que tener al menos 6 caracteres. Si no son iguales o no tiene al menos seis caracteres, se mostrará un mensaje de error en la división errores.
+
+
+Por supuesto los errores que aparezcan deberán ser descriptivos y 
+si hay varios errores, deberán mostrarse todos los mensajes de error. 
