@@ -16,8 +16,7 @@ body{
     padding: 1rem;
 }
 
-
-.divDatos{
+.divDatos--mostrar{
     background-color: red;
     border: 1px solid black;
     border-radius: 3rem;
