@@ -16,11 +16,8 @@ body{
     padding: 1rem;
 }
 
-.divDatos--mostrar{
+.divDatos{
     background-color: red;
     border: 1px solid black;
     border-radius: 3rem;
-}
-.divDatos--ocultar{
-    display: none;
 }
