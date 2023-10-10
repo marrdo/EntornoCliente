@@ -1,0 +1,27 @@
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#divDatos{
+   
+    background-color: #6b4205a9;
+}
+
+#divDatos p{
+    padding: 1rem;
+}
+
+
+.divDatos{
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 3rem;
+}
+.divDatos--ocultar{
+    display: none;
+}

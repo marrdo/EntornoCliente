@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="code.js"></script>
+</head>
+<body>
+    <div class="enunciado">
+        <h1>Ejercicio 3_5 Avanzado</h1>
+        <p> Los microcontroladores y microprocesadores simples no son especialmente
+            buenos usando números con decimales. Por ejemplo, el célebre Arduino
+            usa el microcontrolador ATmega328P y el antiguo Spectrum el Z80. Ninguno
+            de los dos chips tienen una función específica para calcular un seno o un
+            coseno (o cualquier otra función trigonométrica, exponencial o logaritmo).
+            ¿Cómo se calcula entonces? Usando un desarrollo en serie de Taylor. <br>
+            La función coseno (usando radianes) puede aproximarse así:
+            coseno (x) = 1 - (x^2)/2 + (x^4)/24 - (x^6)/720 + (x^8)/40320 <br>
+        
+            La función seno, así:
+            seno (x) = x - (x^3)/6 + (x^5)/120 - (x^7)/5040 + (x^9)/362880 <br>
+        
+            Con cada suma o resta se aumenta la precisión (es una suma infinita),
+            por lo que podemos elegir la precisión que necesitamos. <strong>Crea una web que pida
+            un número de radianes y calcule el seno y el coseno</strong>, además de estas aproximaciones.
+            En la web deberá aparecer al menos una imagen y un párrafo de explicaciones (
+                por ejemplo sobre taylor o sobre la función seno y coseno).
+                El resultado se mostrará en la web console además de en un alert. <br>
+        
+            Nota: <br>
+            x^2 = x*x <br>
+            x^4 = x*x*x*x </p> <br>
+            <input type="button" id="btnMostrar" value="Mostrar cuadros">
+    </div>
+    <div class="cuadros">
+        <label for="seno">Introduce el seno: <input type="number" id="seno" name="seno"></label><br>
+        <label for="coseno">Introduce el coseno: <input type="number" id="coseno" name="coseno"></label><br>
+        <input type="button" id="interpretar" name="interpretar">
+    </div>
+    <div class="result">
+        
+    </div>
+    
+</body>
+</html>
