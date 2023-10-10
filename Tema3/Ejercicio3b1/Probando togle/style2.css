@@ -1,0 +1,27 @@
+#modes_menu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    list-style: none;
+ }
+ 
+ #modes_menu ul li{
+   padding-bottom: 15px;
+ }
+ 
+ /* Clases nuevas */
+ .modes_menu {
+   position: absolute;
+   margin-top: 10px;
+   color: white;
+   background: royalblue;
+   overflow: hidden;
+   box-shadow: 2px 2px 10px rgba(65, 105, 225, 0.8);
+   border-radius: 5px;
+ 
+   /* Transformaciones */
+   transform-origin: left top;
+ }
+ .modes_menu--ocultar {
+   display: none;
+ }
