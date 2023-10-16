@@ -1,0 +1,2 @@
+Estos ejercicios son de sus paginas webs despues del apartado 
+Crear una copia de un array (operador spread ...).
