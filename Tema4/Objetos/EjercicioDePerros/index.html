@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio de Perros</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script defer src="code.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio de Perros</h1>
+        <p>Crea una web que contenga tres textboxes, uno para el nombre del perro, otro para la edad y otro para la raza. Además habrá los siguientes botones con estos comportamientos: </p>
+        <ul>
+            <li>Botón de Añadir:// Se creará un objeto de tipo Perro// y se añadirá a un array de perros.</li>
+            <li>Botón de //Ordenar por inserción:// Se mostrarán todos los perros con sus datos en una lista no ordenada (ul) en el orden en el que se insertaron.</li>
+            <li>Botón de Ordenar por edad: Se mostrarán todos los perros con sus datos en una lista (ol) ordenados por edad.</li>
+            <li>Botón de Ordenar por raza: Se mostrarán todos los perros con sus datos en una lista (ul) ordenados por la raza alfabéticamente.</li>
+            <li>Tendrás que crear un constructor de objetos de tipo Perro que devuelva un objeto de tipo perro que incluya tambien un metodo llamado mostrarDatos() que muestre los datos del perro</li>
+        </ul>
+        <p>Nota: la función de array toSorted() puede ser necesaria para no perder el orden original. </p>
+    </header>
+    <main>
+        <label for="nombre"><input type="text" id="nombre"></label><br>
+        <label for="edad"><input type="number" id="edad"></label>
+        <label for="raza"><input type="text" id="raza"></label>
+        <input type="button" value="Anadir" id="aniadir">
+        <input type="button" value="Ordenar por insercion" id="ordenarIn">
+        <input type="button" value="Ordenar por raza" id="ordenarRaz">
+        
+        <div class="mostrarDatos"></div>
+    </main>
+</body>
+</html>
