@@ -1,0 +1,2 @@
+La funcion constructora de los objetos en JS es function object(){}.
+Solo las funciones constructoras tienen acceso al prototype, es decir, el objeto creado, si no la instancia de creacion del objeto.

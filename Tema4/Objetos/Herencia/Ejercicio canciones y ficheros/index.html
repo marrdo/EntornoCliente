@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script defer src="code.js"></script>
+</head>
+<body>
+    
+    <form action="tu_archivo_php.php" method="POST" enctype="multipart/form-data">
+        <label for="nombreFichero">Nombre fichero:</label>
+        <input type="text" id="nombreFichero" name="nombreFichero"><br><br>
+    
+        <label for="tamanio">Tamaño: </label>
+        <input type="text" id="tamanio" name="tamanio"><br><br>
+
+        <label for="nombreCancion">Nombre cancion: </label>
+        <input type="text" id="nombreCancion" name="nombreCancion"><br><br>
+    
+        <label for="duracion">Duracion: </label>
+        <input type="number" id="duracion" name="duracion"><br><br>
+    
+        <label for="radio1">Fichero<input type="radio" id="radio1" value="fichero"></label><br><br>
+        <label for="radio2">Cancion<input type="radio" id="radio2" value="cancion"></label><br><br>
+
+        <input type="submit" value="Agregar" id="agregar" name="agregar"><br><br>
+        <input type="submit" value="Mostrar" id="mostrar" name="mostrar">
+    </form>
+
+</body>
+</html>
