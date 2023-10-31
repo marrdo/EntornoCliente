@@ -78,3 +78,5 @@ btnMostrar.onclick=function(){
         
   }
 }
+
+//Mirar para examen checkeds!!!!!!!!!!!!

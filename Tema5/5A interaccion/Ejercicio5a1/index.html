@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script defer src="code.js"></script>
+</head>
+<body>
+    <div>
+        <form action="tu_archivo_php.php" method="POST" enctype="multipart/form-data">
+            <label for="nombre">colores</label>
+            <input type="radio" id="colores" name="txtOpcion" value="colores"><br><br>
+        
+            <label for="texto1">animales</label>
+            <input type="radio" id="animales" name="txtOpcion" value="colores"><br><br>
+        
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <div class="resultado"></div>
+</body>
+</html>
