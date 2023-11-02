@@ -1,0 +1,22 @@
+body{
+    background-color: #222;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #idParrafo{
+    border: 1px solid white;
+    padding: 0.5rem;
+  }
+  
+  #idDiv{
+    border: 1px solid red;
+    padding: 0.5rem;
+    width: 80ch;
+  }
+  a{
+    color: turquoise;
+  }

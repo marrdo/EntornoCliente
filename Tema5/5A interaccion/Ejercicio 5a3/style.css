@@ -1,0 +1,17 @@
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: gray;
+}
+
+p{
+    width: 60ch;
+}
+
