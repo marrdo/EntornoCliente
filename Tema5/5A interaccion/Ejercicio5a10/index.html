@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="enunciado">
+        <h1>Ejercicio 5a-10</h1>
+        <p> Crea una web
+            que lea los datos de los gastos diarios de una semana de un fichero
+            CSV (https://es.wikipedia.org/wiki/Valores_separados_por_comas) que
+            seleccionará el usuario. Por ejemplo: </p>
+        <p>Estos gastos se mostrarán en una división de ancho 500px con forma de
+            gráfico de barras horizontales. Las barras estarán normalizadas para
+            ocupar todo el ancho disponible en la división (manteniendo los tamaños
+            relativos entre ellas, claro).
+            De esta manera la mayor cantidad ocupará todo el ancho de la división.
+            Añade también la suma total de los gastos de la semana en alguna posición.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Gastos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>Miercoles</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Sabado</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>160</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="archivo">
+        <label for="archivo"> Introducir el archivo:
+            <input type="file" id="archivo">
+        </label>
+    </section>
+    <div class="grafico"></div>
+</body>
+
+</html>
