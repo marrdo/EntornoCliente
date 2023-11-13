@@ -1,141 +1,167 @@
 "use strict";
 
-class Almacen {
-    constructor() {
-        //array de producto
-      this.catalogo = [];
-      //array deStock de producto
-      this.stock = [];
-    }
-
-    altaProducto(oProducto){
-        let infor = document.querySelector("#listado");
-        let objetoCatalogo;
-        for(let i=0;i<this.catalogo.length;i++){
-            objetoCatalogo = this.catalogo[i];
-
-            if(objetoCatalogo.id == oProducto.id){
-
-                infor.innerHTML = `El producto con la id: ${oProducto.id} ya existe.`;
-                return false;
-            } 
-
-        }
-        this.catalogo.push(objetoCatalogo);
-        infor.innerHTML = `El producto se añadio satisfactoriamente.`
-        return true;
-    }
-
-    entradaStock(idProducto, unidades){
-        let infor = document.querySelector("#listado");
-
-        for(let producto of this.catalogo){
-            if (producto.id == idProducto) {
-                let stockProd = new StockProducto(idProducto,unidades);
-                this.stock.push(stockProd);
-                infor.innerHTML = `El producto se añadio satisfactoriamente. Hay ${this.unidades} de producto.`
-            }
-        }
-
-        infor.innerHTML = `Este producto no se encuentra.`
-    }
-
-    
-    salidaStock(idProducto, unidades){
-        let infor = document.querySelector("#listado");
-
-        for(let producto of this.catalogo){
-            if (producto.id == idProducto) {
-                let stockProd = new StockProducto(idProducto,unidades);
-                this.stock.push(stockProd);
-                infor.innerHTML = `El producto se añadio satisfactoriamente. Hay ${this.unidades} de producto.`
-            }
-        }
-
-        infor.innerHTML = `Este producto no se encuentra.`
-    }
-
-}
-
-
+/**
+ * Empezamos creando la clase producto, para que
+ * se use la herencia en los demas productos que se crean y haya
+ * un razonamiento logico en el objeto almacen.
+ */
 
 class Producto {
+  constructor(id, nombre, precio) {
+    this.id = id;
+    this.nombre = nombre;
+    this.precio = precio;
+  }
 
-    constructor(id,nombre,precio){
-        this.id=id;
-        this.nombre = nombre;
-        this.precio = precio;
-    }
-
-    toString(){
-        return `Id:${id}, Nombre:${nombre}, Precio: ${this.precio}`
-    }
+  toString() {
+    return `Nombre: ${this.nombre} Precio: ${this.precio} Id producto: ${this.id}`;
+  }
 }
 
-class StockProducto extends Producto{
-    constructor(idProducto,unidades){
-        super(idProducto)
-        this.unidades=unidades;
-    }
+class Movil extends Producto {
+  constructor(id, nombre, precio, modelo, android) {
+    super(id, nombre, precio);
+    this.modelo = modelo;
+    this.android = android;
+  }
 
-    toHTMLRow(){/*TO-DO */
-    const row = document.createElement("tr");
-    const td = document.createElement("td");
-
-    td.innerHTML = `${this.id}`;
-    row.appendChild(td);
-
-    td.innerHTML = `${this.unidades}`;
-    row.appendChild(td);
-    }
-
-
+  toHTMLRow() {
+    /*id nombre precio android*/
+    return `<tr><td>${this.id}</td><td>${this.nombre}</td><td>${this.precio}</td><td>${this.android}</td></tr>`;
+  }
 }
 
-class Movil extends Producto{
-    constructor(idProducto,nombreProducto,precioProducto,modelo,android){
-        super(idProducto,nombreProducto,precioProducto);
-        this.modelo= modelo;
-        this.android = android;
-    }
+class Carcasa extends Producto {
+  constructor(id, nombre, precio, material) {
+    super(id, nombre, precio);
+    this.material = material;
+  }
 
-    toHTMLRow(){
-        const row = document.createElement("tr");
-        const td = document.createElement("td");
+  toHTMLRow() {
+    /*id nombre precio material*/
 
-        td.innerHTML = `${this.id}`;
-        row.appendChild(td);
-
-        td.innerHTML = `${this.nombre}`;
-        row.appendChild(td);
-
-        td.innerHTML = `${this.precio}`;
-        row.appendChild(td);
-
-        td.innerHTML = `${this.android}`;
-        row.appendChild(td);
-    }
+    return `<tr><td>${this.id}</td><td>${this.nombre}</td><td>${this.precio}</td><td>${this.material}</td></tr>`;
+  }
 }
 
+class StockProducto {
+  constructor(idProducto, unidades) {
+    this.idProducto = idProducto;
+    this.unidades = unidades;
+  }
 
-class Carcasa extends Producto{
-    constructor(material){
-        this.material=material;
+  toHTMLRow() {
+    return `<tr><td>${this.idProducto}</td><td>${this.unidades}</td></tr>`;
+  }
+}
+
+class Almacen {
+  constructor() {
+    /*Array de producto*/
+    this.catalogo = [];
+    /*Array de StockProducto*/
+    this.stock = [];
+  }
+
+  //   altaProducto(Producto /*Devuelve: boolean*/) {
+  //     //Recogemos el div donde mandaremos la informacion.
+  //     const informacion = document.querySelector("#listado");
+  //     //Vaciamos el div listado
+  //     informacion.innerHTML = "";
+  //     //En caso de que el identificador del producto ya exista se devolverá false
+  //     //comprobamos el array
+  //     if (this.catalogo > 0) {
+  //       this.catalogo.forEach((producto) => {
+  //         if (Producto.id == producto.id) {
+  //           informacion.innerHTML = `La id de ${Producto} ya se encuentra en el catálogo`;
+  //           return false;
+  //         }
+  //       });
+  //       this.catalogo.push(Producto);
+  //       informacion.innerHTML = `El producto ${Producto} fue dado de alta.`;
+  //       return true;
+  //     } else {
+  //       this.catalogo.push(Producto);
+  //       informacion.innerHTML = `El producto ${Producto} fue dado de alta.`;
+  //       return true;
+  //     }
+  //   }
+
+  altaProducto(Producto /*Devuelve: boolean*/) {
+    // Recogemos el div donde mandaremos la información.
+    const informacion = document.querySelector("#listado");
+    // Vaciamos el div listado
+    informacion.innerHTML = "";
+
+    // Comprobamos si el identificador del producto ya existe
+    const productoExistente = this.catalogo.find(
+      (productoArray) => Producto.id === productoArray.id
+    );
+
+    if (productoExistente) {
+      // El identificador del producto ya existe
+      informacion.innerHTML = `La id ${Producto.id} ya se encuentra en el catálogo`;
+      return false;
     }
 
-    toHTMLRow(){
-        const row = document.createElement("tr");
-        const td = document.createElement("td");
+    // En caso de que el identificador del producto no exista, lo añadimos al array
+    this.catalogo.push(Producto);
+    informacion.innerHTML = `El producto ${Producto} fue dado de alta.`;
+    return true;
+  }
 
-        td.innerHTML = `${this.id}`;
-        row.appendChild(td);
-
-        td.innerHTML = `${this.nombre}`;
-        row.appendChild(td);
-
-        td.innerHTML = `${this.precio}`;
-        row.appendChild(td);
-
-        td.innerHTML = `${this.material}`
+  entradaStock(idProducto, unidades /*Devuelve: String*/) {
+    //Recupero el div donde mandar informacion
+    const informacion = document.querySelector('#listado');
+    /**En caso de que el identificador del producto no exista 
+     * se devolverá un mensaje indicando que no se realizó la 
+     * operación por este motivo.  */
+    let idfind = this.catalogo.find((producto)=> producto.id == idProducto);
+    if(!idfind){
+        informacion.innerHTML = `No se encontró el id ${idProducto}.`
+    }else{
+        /*
+        En caso de que el identificador del producto ya exista se 
+        creará un objeto StockProducto y lo insertará en el 
+        array stock y se devolverá un mensaje indicando que 
+        la operación se realizó correctamente y el número de unidades 
+        de ese producto que quedan en el almacén
+         */
+        let productoStock = new StockProducto(idProducto,unidades);
+        this.stock.push(productoStock);
+        informacion.innerHTML = `En el almacen quedan ${unidades} de producto`;
     }
+  }
+
+  salidaStock(idProducto, unidades /*Devuelve: String*/) 
+  {
+       //Recupero el div donde mandar informacion
+       const informacion = document.querySelector('#listado');
+       /**En caso de que el identificador del producto no exista 
+        * se devolverá un mensaje indicando que no se realizó la 
+        * operación por este motivo.  */
+       let idfind = this.catalogo.find((producto)=> producto.id == idProducto);
+       if(!idfind){
+           informacion.innerHTML = `No se encontró el id ${idProducto}.`
+       }else{
+           /*
+           En caso de que el identificador del producto ya exista se 
+           creará un objeto StockProducto y lo insertará en el 
+           array stock y se devolverá un mensaje indicando que 
+           la operación se realizó correctamente y el número de unidades 
+           de ese producto que quedan en el almacén
+            */
+           let productoStock = new StockProducto(idProducto,unidades);
+           this.stock.push(productoStock);
+           informacion.innerHTML = `En el almacen quedan ${unidades} de producto`;
+       }
+  }
+
+  listadoCatalogo /*Devuelve: htmlTable*/() {}
+
+  listadoStock /*Devuelve: htmlTable*/() {}
+
+  numCarcasaStock /*Devuelve: number*/() {}
+
+  importeTotalStock /*Devuelve: number*/() {}
 }
