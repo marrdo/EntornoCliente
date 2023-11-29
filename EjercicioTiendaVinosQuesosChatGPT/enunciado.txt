@@ -1,0 +1,74 @@
+Práctica de Desarrollo Web con JavaScript: Vinos y Quesos
+
+Descripción:
+Desarrollar una página web para gestionar datos de una tienda especializada en vinos y quesos. Implementar clases y eventos en JavaScript para realizar acciones como agregar nuevos productos, registrar ventas, actualizar totales y generar un listado separado.
+
+a) Estructura de Clases:
+
+    Tienda (Sintaxis de clase en JS):
+        Atributos:
+            productos: Array que almacenará instancias de las clases Vino y Queso.
+        Métodos:
+            agregarProducto(producto): Agrega un nuevo producto al array de productos.
+
+    Vino (Sintaxis de clase en JS):
+        Atributos:
+            nombre, anioCosecha, tipo (tinto, blanco, rosado), precio, estado (disponible o agotado).
+        Métodos:
+            venderVino(): Cambia el estado del vino a "agotado" al realizar una venta.
+
+    Queso (Sintaxis de clase en JS):
+        Atributos:
+            nombre, tipo (azul, brie, cheddar), origen, precio, estado (disponible o agotado).
+        Métodos:
+            venderQueso(): Cambia el estado del queso a "agotado" al realizar una venta.
+
+b) Eventos y Acciones:
+
+    Alta de Producto:
+        Formulario: frmAltaProducto.
+        Campos: txtNombre, lstTipo (para vino y queso), lstAnioCosecha (solo para vino), lstOrigen (solo para queso), txtPrecio, rbtEstado.
+        Acciones:
+            Validar que todos los campos estén completos. Mostrar alerta de error si no.
+            Crear una instancia de la clase Vino o Queso según el tipo seleccionado en lstTipo.
+            Agregar el producto a la tienda. Mostrar alerta de éxito o de producto existente.
+            Ocultar el formulario después del proceso.
+
+    Venta de Producto:
+        Formulario: frmVentaProducto.
+        Campos: txtLocalizador.
+        Acciones:
+            Obtener el localizador introducido.
+            Validar existencia del producto. Mostrar alerta si no existe.
+            Validar estado del producto. Mostrar alerta de agotado o realizar la venta.
+            Actualizar el estado del producto a "agotado" después de la venta.
+
+    Refrescar Totales:
+        Botón: btnRefrescarTotales.
+        Acciones:
+            Calcular y mostrar totales de productos, productos disponibles y agotados.
+
+    Listado Separado:
+        Botón: btnListadoSeparado.
+        Acciones:
+            Mostrar en un div o sección información separada para vinos y quesos, con las columnas necesarias.
+
+Notas Adicionales:
+
+    lstTipo.value: Devuelve el valor seleccionado en la lista desplegable de tipo (vino o queso).
+    lstAnioCosecha.value: Devuelve el valor seleccionado en la lista desplegable de año de cosecha (solo para vinos).
+    lstOrigen.value: Devuelve el valor seleccionado en la lista desplegable de origen (solo para quesos).
+
+Puntuación:
+
+    a) Codificación estructura clases: 2,5 puntos
+    b) Alta productos: 2,5 puntos
+    c) Venta de productos: 1,5 puntos
+    d) Refrescar totales: 1,5 puntos
+    e) Listado separado: 2 puntos
+
+Instrucciones Importantes:
+
+    Utilizar la sintaxis de clase de JavaScript para la construcción de clases.
+    Adjuntar capturas de pantalla que muestren el uso de input radio, checkboxes y otros elementos en el código.
+    Utilizar arrays para almacenar datos relevantes y mostrar el manejo de eventos en el código.
