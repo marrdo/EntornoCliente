@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="objetos.js"></script>
     <script defer src="code.js"></script>
     <title>Gestión de Vinos y Quesos</title>
@@ -19,11 +20,11 @@
         <label for="txtNombre">Nombre:</label>
         <input type="text" id="txtNombre" required>
 
-        <label for="lstTipo">Tipo:</label>
-        <select id="lstTipo" required>
-            <option value="vino">Vino</option>
-            <option value="queso">Queso</option>
-        </select>
+        <label>Tipo:</label>
+        <label for="queso">Queso</label>
+        <input type="radio" name="lstTipos" id="queso" value="queso">
+        <label for="vino">Vino</label>
+        <input type="radio" name="lstTipos" id="vino" value="vino">
 
         <label for="lstAnioCosecha">Año de Cosecha:</label>
         <select id="lstAnioCosecha">
@@ -48,7 +49,7 @@
         </select>
 
         <label for="txtPrecio">Precio:</label>
-        <input type="number" id="txtPrecio" required>
+        <input type="text" id="txtPrecio" required>
 
         <label>Estado:</label>
         <input type="radio" name="rbtEstado" value="disponible" checked> Disponible
@@ -68,8 +69,8 @@
     <!-- Botones y Secciones para Totales y Listado Separado -->
     <button type="button" id="btnRefrescarTotales">Refrescar Totales</button>
     <button type="button" id="btnListadoSeparado">Listado Separado</button>
-    <button type="button" id="btnAgregarProducto">Agregar producto</button>
-    <button type="button" id="btnVenderProducto">Vender producto</button>
+    <button type="button" id="btnFrmAgregarProducto">Agregar producto</button>
+    <button type="button" id="btnFrmVenderProducto">Vender producto</button>
 
     <div id="seccionTotales">
         <!-- Mostrar totales aquí -->
