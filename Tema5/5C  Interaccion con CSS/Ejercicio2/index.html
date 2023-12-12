@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="code.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section><h1>Enunciado</h1>
+        <p>Crea una web que use tailwind a partir de un CDN. Según la documentación inicial (https://tailwindcss.com/docs/installation/play-cdn), esto se consigue añadiendo al &gl;head&gt; la siguiente línea. </p>
+        <code>&gl;script src="https://cdn.tailwindcss.com"&gt;&gl;/script&gt;</code>
+        <p&gt;>En tu web habrá una etiqueta &gl;p id="parrafo"&gt;Hola caracola&gl;/p&gt; y un formulario con un textbox y dos botones: Añadir y Eliminar</p>
+        <p>Cada vez que se pulse Añadir, se añadirá al párrafo la clase de tailwind que el usuario haya indicado en el textbox.</p>
+        <p>Cada vez que se pulse Eliminar, se eliminará del párrafo la clase de tailwind que el usuario haya indicado en el textbox.</p>
+        <p>Ejemplos de clases para probar:</p>
+        <ul>
+            <li>p-2</li>
+            <li>m-5</li>
+            <li>bg-indigo-200</li>
+            <li>w-1/2</li>
+            <li>border-solid border-2 border-indigo-500</li>
+            <li>drop-shadow-lg</li>
+        </ul>
+    </section>
+    <section>
+        <p id="parrafo">Hola caracola</p> 
+        <form action="tu_archivo_php.php" method="POST" enctype="multipart/form-data">
+
+        
+            <label for="texto1">Texto 1:</label>
+            <input type="text" id="texto1" name="texto1"><br><br>
+        
+            <button type="button" id="añadir">Añadir</button>
+            <button type="button" id="eliminar">Eliminar</button>
+
+        </form>
+    </section>
+</body>
+</html>
