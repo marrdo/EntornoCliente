@@ -1,0 +1,44 @@
+.toast{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 10rem;
+    width: 10rem;
+    background-color: #234565;
+    color: whitesmoke;
+}
+
+.derTop{
+    right: 0;
+    top: 0;
+}
+
+.derBot{
+    right: 0;
+    bottom: 0;
+}
+
+.bot{
+    bottom: 0;
+    right: 50%;
+}
+.botLef{
+    bottom: 0;
+    left: 0;
+}
+
+.topLef{
+    top: 0;
+    left: 0;
+}
+
+.top{
+    top: 0;
+    left: 50%;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
