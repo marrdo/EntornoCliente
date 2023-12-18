@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="code.js"></script>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="enunciado">
+            <p>Crea una web con tres listas sin ordenar y un par de radio buttons.</p>
+            <p>La primera lista tendrá una serie de nombres de alumnos. 
+                La segunda tendrá una serie de alumnos aprobados 
+                y la tercera alumnos suspensos.</p>
+            <p>Las opciones del radio button serán dos: aprobado y suspenso.</p>
+            <p>Si se pulsa sobre un alumno de la primera lista y 
+                está seleccionada la opción aprobado, se moverá a la 
+                lista de aprobados como último elemento.</p>
+            <p>Si se pulsa sobre un alumno de la primera lista y está 
+                seleccionada la opción suspenso, se moverá a la lista 
+                de suspensos como primer elemento.</p>
+            <p>Finalmente si se pulsa sobre un alumno de la lista de suspenso, 
+                volverá a la primera lista de alumnos. </p>
+            <p>Parte de esta lista de alumnos: </p>
+            <code>
+                &gl; ul class="listaAlumnos" &gt;<br>
+                &gl; li>Tomás Tuerzo &gl;/li&gt;<br>
+                &gl; li>Aitor Tilla &gl;/li&gt;<br>
+                &gl; li>Sara Mago &gl;/li&gt;<br>
+                &gl; li>Pancho Colate &gl;/li<br>
+                &gl; li>Ana Tema &gl;/li&gt;<br>
+                &gl; li>Armando Bronca &gl;/li&gt;<br>
+                &gl; li>Aitor Menta &gl;/li&gt;<br>
+                &gl; /ul&gt;<br>
+            </code>
+        </section>
+        <section class="resolucion">
+            <ul class="listaAlumnos">
+                <li>Tomás Tuerzo</li>
+                <li>Aitor Tilla</li>
+                <li>Sara Mago</li>
+                <li>Pancho Colate</li>
+                <li>Ana Tema</li>
+                <li>Armando Bronca</li>
+                <li>Aitor Menta</li>
+              </ul>
+            <ul class="aprobado">Aprobados
+
+            </ul>
+            <ul class="suspenso">Suspensos
+
+            </ul>
+            <label for="seleccion">Aprobado<input type="radio" name="cambio" id="seleccion" value="aprobado" checked></label>
+            <label for="seleccion">Suspenso<input type="radio" name="cambio" id="seleccion" value="suspenso"></label>
+            
+        </section>
+    </main>
+</body>
+</html>
