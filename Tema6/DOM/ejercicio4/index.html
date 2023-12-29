@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="code.js"></script>
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 4</title>
 </head>
 <body>
     <main>
@@ -26,19 +26,19 @@
                 volverá a la primera lista de alumnos. </p>
             <p>Parte de esta lista de alumnos: </p>
             <code>
-                &gl; ul class="listaAlumnos" &gt;<br>
-                &gl; li>Tomás Tuerzo &gl;/li&gt;<br>
-                &gl; li>Aitor Tilla &gl;/li&gt;<br>
-                &gl; li>Sara Mago &gl;/li&gt;<br>
-                &gl; li>Pancho Colate &gl;/li<br>
-                &gl; li>Ana Tema &gl;/li&gt;<br>
-                &gl; li>Armando Bronca &gl;/li&gt;<br>
-                &gl; li>Aitor Menta &gl;/li&gt;<br>
-                &gl; /ul&gt;<br>
+                &lt;ul class="listaAlumnos" &gt;<br>
+                &lt;li>Tomás Tuerzo &lt;/li&gt;<br>
+                &lt;li>Aitor Tilla &lt;/li&gt;<br>
+                &lt;li>Sara Mago &lt;/li&gt;<br>
+                &lt;li>Pancho Colate &lt;/li<br>
+                &lt;li>Ana Tema &lt;/li&gt;<br>
+                &lt;li>Armando Bronca &lt;/li&gt;<br>
+                &lt;li>Aitor Menta &lt;/li&gt;<br>
+                &lt;/ul&gt;<br>
             </code>
         </section>
         <section class="resolucion">
-            <ul class="listaAlumnos">
+            <ul class="listaAlumnos"><h1>Lista de alumnos</h1>
                 <li>Tomás Tuerzo</li>
                 <li>Aitor Tilla</li>
                 <li>Sara Mago</li>
@@ -47,14 +47,14 @@
                 <li>Armando Bronca</li>
                 <li>Aitor Menta</li>
               </ul>
-            <ul class="aprobado">Aprobados
-
-            </ul>
-            <ul class="suspenso">Suspensos
-
-            </ul>
-            <label for="seleccion">Aprobado<input type="radio" name="cambio" id="seleccion" value="aprobado" checked></label>
-            <label for="seleccion">Suspenso<input type="radio" name="cambio" id="seleccion" value="suspenso"></label>
+            <article class="listas">
+                <ul class="aprobado"><h1>Aprobados</h1>
+                </ul>
+                <ul class="suspenso"><h1>Suspensos</h1>
+                </ul>
+            </article>
+            <label for="aprobado">Aprobado<input type="radio" name="cambio" id="aprobado" value="aprobado" checked></label>
+            <label for="suspenso">Suspenso<input type="radio" name="cambio" id="suspenso" value="suspenso"></label>
             
         </section>
     </main>
