@@ -26,7 +26,7 @@ function cargarArchivo(xml) {
 
   xml.querySelectorAll("food").forEach((element) => {
     console.log(element);
-    const name = document.querySelector("name");
+    const name = element.childNodes;
     const price = name.nextElementSibling;
     const description = price.nextElementSibling;
     const calories = description.nextElementSibling;
